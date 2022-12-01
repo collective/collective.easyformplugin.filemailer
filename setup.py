@@ -16,7 +16,7 @@ long_description = "\n\n".join(
 
 setup(
     name="collective.easyformplugin.filemailer",
-    version="0.7.2.dev0",
+    version="0.7.2",
     description="An add-on for Plone",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/

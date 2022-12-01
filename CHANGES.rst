@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.7.2 (unreleased)
+0.7.2 (2022-12-01)
 ------------------
 
 - Remove pdb debug line.
