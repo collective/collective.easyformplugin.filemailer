@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.0a1 (unreleased)
-------------------
+0.7 (2022-12-01)
+----------------
 
 - Initial release.
   [fredvd]
