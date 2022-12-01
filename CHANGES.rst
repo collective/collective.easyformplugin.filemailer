@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-0.8 (unreleased)
-----------------
+0.7.1 (2022-12-01)
+------------------
 
 - Release to PyPI.
   [fredvd]
