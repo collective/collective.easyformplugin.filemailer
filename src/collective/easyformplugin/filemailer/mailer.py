@@ -87,7 +87,6 @@ class FileMailer(Mailer):
                 obj = portal.unrestrictedTraverse(myfile)
             except:
                 obj = None
-        import pdb; pdb.set_trace()
         if obj and obj.file:
             attachments.append((obj.file.filename,obj.file.contentType,'utf-8',obj.file.data))
         else:
