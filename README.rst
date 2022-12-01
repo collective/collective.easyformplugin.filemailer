@@ -31,25 +31,21 @@
 collective.easyformplugin.filemailer
 ====================================
 
-An add-on for Plone
+This add'on registers a new Easyform Action File Mailer. 
 
 Features
 --------
 
-- Can be bullet points
+This File Mailer action is almost identical to the normal Mailer action, but adds an extra tab 'attachment' in the Action.
+Here you can specify the internal url path to a private File Item in Plone. This file will be added as an attachment to the Mail sent. 
+The main use case is to send PDF white papers or other documents that you want to distribute only to visitors leaving their contact details.
 
 
 Examples
 --------
 
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+-
 
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
 
 
 Translations
@@ -57,7 +53,7 @@ Translations
 
 This product has been translated into
 
-- Klingon (thanks, K'Plai)
+- Dutch
 
 
 Installation
@@ -79,30 +75,20 @@ and then running ``bin/buildout``
 Authors
 -------
 
-Provided by awesome people ;)
+- Fred van Dijk  - Zest Software
 
 
 Contributors
 ------------
 
-Put your name here, you deserve it!
-
-- ?
-
+- 
 
 Contribute
 ----------
 
 - Issue Tracker: https://github.com/collective/collective.easyformplugin.filemailer/issues
 - Source Code: https://github.com/collective/collective.easyformplugin.filemailer
-- Documentation: https://docs.plone.org/foo/bar
 
-
-Support
--------
-
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
 
 
 License

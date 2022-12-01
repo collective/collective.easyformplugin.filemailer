@@ -3,43 +3,29 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.easyformplugin.filemailer">
 
   <i18n:registerTranslations directory="locales" />
 
-  <!--
-    Be careful if you use general includeDependencies, it can have side effects!
-    Better import explicit packages or configurations ;)
-  -->
-  <!--<includeDependencies package="." />-->
-
-  <include package=".browser" />
-
-  <include file="permissions.zcml" />
-
-  <genericsetup:registerProfile
-      name="default"
-      title="collective.easyformplugin.filemailer"
-      directory="profiles/default"
-      description="Installs the collective.easyformplugin.filemailer add-on."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.post_install"
-      />
-
-  <genericsetup:registerProfile
-      name="uninstall"
-      title="collective.easyformplugin.filemailer (uninstall)"
-      directory="profiles/uninstall"
-      description="Uninstalls the collective.easyformplugin.filemailer add-on."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.uninstall"
-      />
+  <include package="collective.easyform" />
 
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="collective.easyformplugin.filemailer-hiddenprofiles"
       />
 
-  <!-- -*- extra stuff goes here -*- -->
+  
+  <utility
+      name="collective.easyformplugin.filemailer.mailer.FileMailer"
+      component=".mailer.FileMailerAction"
+      />
+
+  <utility
+      name="collective.easyformplugin.filemailer.mailer.FileMailer"
+      component=".mailer.FileMailerHandler"
+      />
+
+  <adapter factory=".mailer.FileAttachmentValidator" />
 
 </configure>
